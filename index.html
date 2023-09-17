@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
    <!-- CSS Normalize -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/global.css">
     <link rel="stylesheet" type="text/css" href="./assets/pokedex.css">
@@ -28,26 +28,17 @@
             </form>
           </div>
         <ol class="pokemonsOl" id="pokemonsList">
-            <!-- <li class="pokemonCardLi">    
-                 <div class="cardImgConteiner">
-                    <img class="pokemonCardImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="">            
-                </div>
-                <span class="pokemonCardName">Name</span>
-                <span class="pokemonCardNumber">NUMBER</span>
-            </li> -->
-            <!-- <li class="pokemonCardLi">
-                <div class="cardImgConteiner">                
-                    <img class="pokemonCardImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg" alt="">
-                </div>
-                <p class="pokemonCardName">Name</p>
-                <p class="pokemonCardNumber">NUMBER</p>
-            </li> -->
         </ol>
+        <div id="divBtnLoadMore">
+          <button type="button" class="btn btn-primary" id="btnLoadMore"`>Carregar +</button>
+        </div>
+        
         
 
     </section>
 
     <!-- scripts -->
+    <script src="./source/pokemon-model.js"></script>
     <script src="./source/poke-api.js"></script>
     <script src="./source/main.js"></script>
 </body>
