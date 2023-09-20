@@ -1,9 +1,11 @@
 const pokemonList = document.getElementById('pokemonsList');
 const btnLoadMore = document.getElementById('btnLoadMore');
+const body = document.body;
+
 
 let offsetV = 0;
 let limitV = 5;
-
+let modal = true;
 
 function listTypes (pokemon){
   const liPokemons = pokemon.types.map(type => {
@@ -15,7 +17,7 @@ function listTypes (pokemon){
 }
 
 function convertPokemonsToLi(pokemon){
-return `<li class="pokemon${pokemon.type}">    
+return ` <li class="pokemon${pokemon.type}">    
           <div class="pokemonCardImgConteiner">
               <img class="pokemonCardImg" id="${pokemon.name}Img" src=${pokemon.photo} alt="">            
           </div>
@@ -26,7 +28,14 @@ return `<li class="pokemon${pokemon.type}">
             </ol>
           </div>
           <div class="overlay"></div>
-        </li>`
+          </li>
+        `
+}
+
+
+
+function openModal () {
+  return `<div class="modal-dialog modal">...</div>`
 }
 
 function loadMore (offset, limit) {
@@ -43,6 +52,8 @@ btnLoadMore.addEventListener('click', () => {
 })
 
 
-
+while (modal){
+  body.innerHTML = openModal();
+}
 
 
