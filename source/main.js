@@ -5,7 +5,7 @@ const body = document.body;
 
 let offsetV = 0;
 let limitV = 5;
-let modal = true;
+
 
 function listTypes (pokemon){
   const liPokemons = pokemon.types.map(type => {
@@ -34,9 +34,6 @@ return ` <li class="pokemon${pokemon.type}">
 
 
 
-function openModal () {
-  return `<div class="modal-dialog modal">...</div>`
-}
 
 function loadMore (offset, limit) {
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -51,9 +48,5 @@ btnLoadMore.addEventListener('click', () => {
   loadMore(offsetV, limitV)
 })
 
-
-while (modal){
-  body.innerHTML = openModal();
-}
 
 
